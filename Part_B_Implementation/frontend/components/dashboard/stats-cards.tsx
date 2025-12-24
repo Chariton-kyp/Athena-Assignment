@@ -55,6 +55,7 @@ function StatCard({
 export function StatsCards() {
   const { data: stats, isLoading, error } = useStats();
   const t = useTranslations("dashboard");
+  const tStatus = useTranslations("status");
 
   if (error) {
     return (
@@ -78,9 +79,9 @@ export function StatsCards() {
       />
       <StatCard
         title={t("pendingReview")}
-        value={stats?.pending_count}
+        value={(stats?.pending_count ?? 0) + (stats?.edited_count ?? 0)}
         icon={<Clock className="h-4 w-4 text-yellow-500" />}
-        description={t("awaitingApproval")}
+        description={`${stats?.pending_count ?? 0} ${tStatus("pending")} + ${stats?.edited_count ?? 0} ${tStatus("edited")}`}
         className="border-l-4 border-l-yellow-500"
         isLoading={isLoading}
       />

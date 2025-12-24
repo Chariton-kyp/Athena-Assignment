@@ -118,11 +118,13 @@ class ExportService:
             filename=filename,
         )
 
-        # Mark records as exported (only approved/edited, not rejected)
+        # Mark records as exported (only approved, not edited or rejected)
+        # Edited records are included in exports but keep their status
+        # since they haven't been formally approved yet
         # Collect IDs of records that were marked as exported for auto-sync
         exported_ids: list[str] = []
         for record in records:
-            if record.status in ("approved", "edited"):
+            if record.status == "approved":
                 record.status = "exported"
                 record.updated_at = datetime.now(UTC)
                 await self.repository.update(record)

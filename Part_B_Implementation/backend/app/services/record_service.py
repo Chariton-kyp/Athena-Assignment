@@ -503,10 +503,10 @@ class RecordService:
 
         # Calculate totals
         total = sum(stats["by_status"].values())
+        # Each status is separate for consistency with the chart
         pending = stats["by_status"].get("pending", 0)
-        approved = stats["by_status"].get("approved", 0) + stats["by_status"].get(
-            "edited", 0
-        )
+        edited = stats["by_status"].get("edited", 0)
+        approved = stats["by_status"].get("approved", 0)
         rejected = stats["by_status"].get("rejected", 0)
         exported = stats["by_status"].get("exported", 0)
 
@@ -515,6 +515,7 @@ class RecordService:
             "by_type": stats["by_type"],
             "total": total,
             "pending_count": pending,
+            "edited_count": edited,
             "approved_count": approved,
             "rejected_count": rejected,
             "exported_count": exported,
