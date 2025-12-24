@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle" fill="url(#blueGrad)" font-family="Arial, sans-serif" font-size="28" font-weight="bold">TechFlow Automation Platform - System Architecture</text>
+
+  <!-- DATA SOURCES Section -->
+  <rect x="50" y="80" width="350" height="200" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="110" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="16" font-weight="bold">DATA SOURCES</text>
+
+  <!-- Source boxes -->
+  <rect x="70" y="130" width="100" height="60" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="120" y="155" text-anchor="middle" fill="#fde68a" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Web Forms</text>
+  <text x="120" y="175" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">HTML</text>
+
+  <rect x="180" y="130" width="100" height="60" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="230" y="155" text-anchor="middle" fill="#fde68a" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Emails</text>
+  <text x="230" y="175" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">.EML files</text>
+
+  <rect x="290" y="130" width="100" height="60" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="340" y="155" text-anchor="middle" fill="#fde68a" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Invoices</text>
+  <text x="340" y="175" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">PDF/HTML</text>
+
+  <!-- User icon -->
+  <circle cx="120" cy="240" r="25" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <text x="120" y="245" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">👤</text>
+  <text x="120" y="265" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Client</text>
+
+  <!-- Arrow from sources to system -->
+  <path d="M 400 180 L 450 180 L 450 380 L 500 380" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- PROCESSING SYSTEM Section -->
+  <rect x="500" y="80" width="400" height="450" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="110" text-anchor="middle" fill="#3b82f6" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AUTOMATION PLATFORM</text>
+
+  <!-- API Gateway -->
+  <rect x="520" y="130" width="360" height="50" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="700" y="160" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FastAPI Backend (REST API)</text>
+
+  <!-- Extraction Engine -->
+  <rect x="520" y="195" width="170" height="80" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="605" y="225" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Extraction Engine</text>
+  <text x="605" y="245" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">AI + Rule-based</text>
+  <text x="605" y="260" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Confidence Scoring</text>
+
+  <!-- Record Service -->
+  <rect x="710" y="195" width="170" height="80" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="795" y="225" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Record Service</text>
+  <text x="795" y="245" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">CRUD Operations</text>
+  <text x="795" y="260" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Workflow Logic</text>
+
+  <!-- Database -->
+  <rect x="520" y="295" width="170" height="80" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="605" y="325" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PostgreSQL 16</text>
+  <text x="605" y="345" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">+ pgvector</text>
+  <text x="605" y="360" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Embeddings Storage</text>
+
+  <!-- Export Service -->
+  <rect x="710" y="295" width="170" height="80" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="795" y="325" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Export Service</text>
+  <text x="795" y="345" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">CSV, Excel, JSON</text>
+  <text x="795" y="360" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Google Sheets API</text>
+
+  <!-- Notification Service -->
+  <rect x="520" y="395" width="170" height="60" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="605" y="420" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Notifications</text>
+  <text x="605" y="440" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">WebSocket Real-time</text>
+
+  <!-- AI Service -->
+  <rect x="710" y="395" width="170" height="60" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="795" y="420" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AI/ML Service</text>
+  <text x="795" y="440" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Semantic Search</text>
+
+  <!-- Next.js Frontend -->
+  <rect x="520" y="475" width="360" height="45" rx="8" fill="#1e3a5f" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="700" y="503" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Next.js 15 Dashboard (Human-in-the-Loop UI)</text>
+
+  <!-- OUTPUT Section -->
+  <rect x="950" y="80" width="200" height="200" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="110" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="16" font-weight="bold">OUTPUTS</text>
+
+  <!-- Output boxes -->
+  <rect x="970" y="130" width="160" height="40" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1050" y="155" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Google Sheets</text>
+
+  <rect x="970" y="180" width="160" height="40" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1050" y="205" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Excel/CSV Export</text>
+
+  <rect x="970" y="230" width="160" height="40" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1050" y="255" text-anchor="middle" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JSON API</text>
+
+  <!-- Arrow from system to output -->
+  <path d="M 900 235 L 950 235" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- STAFF Section -->
+  <rect x="950" y="320" width="200" height="130" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="350" text-anchor="middle" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="16" font-weight="bold">TechFlow Staff</text>
+
+  <circle cx="1010" cy="400" r="25" fill="#334155" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="1010" y="405" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="20">👨‍💼</text>
+
+  <circle cx="1090" cy="400" r="25" fill="#334155" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="1090" y="405" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="20">👩‍💼</text>
+
+  <text x="1050" y="440" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Review &amp; Approve</text>
+
+  <!-- Bidirectional arrow staff to system -->
+  <path d="M 950 385 L 900 385 L 900 500 L 900 500" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+  </defs>
+
+  <!-- WORKFLOW at bottom -->
+  <rect x="50" y="560" width="1100" height="220" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="1" filter="url(#shadow)"/>
+  <text x="600" y="590" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Human-in-the-Loop Workflow</text>
+
+  <!-- Workflow steps -->
+  <g transform="translate(100, 620)">
+    <!-- Step 1 -->
+    <circle cx="50" cy="50" r="35" fill="url(#orangeGrad)"/>
+    <text x="50" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">1</text>
+    <text x="50" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DATA INPUT</text>
+    <text x="50" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Forms/Emails/PDFs</text>
+
+    <!-- Arrow -->
+    <path d="M 100 50 L 150 50" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 2 -->
+    <circle cx="200" cy="50" r="35" fill="url(#blueGrad)"/>
+    <text x="200" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">2</text>
+    <text x="200" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">EXTRACT</text>
+    <text x="200" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">AI + Rules</text>
+
+    <!-- Arrow -->
+    <path d="M 250 50 L 300 50" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 3 -->
+    <circle cx="350" cy="50" r="35" fill="url(#blueGrad)"/>
+    <text x="350" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">3</text>
+    <text x="350" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PENDING</text>
+    <text x="350" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Queue for Review</text>
+
+    <!-- Arrow -->
+    <path d="M 400 50 L 450 50" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 4 -->
+    <circle cx="500" cy="50" r="35" stroke="#a78bfa" stroke-width="3" fill="#1e293b"/>
+    <text x="500" y="55" text-anchor="middle" fill="#a78bfa" font-family="Arial, sans-serif" font-size="20" font-weight="bold">4</text>
+    <text x="500" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">REVIEW</text>
+    <text x="500" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Human Check</text>
+
+    <!-- Arrow -->
+    <path d="M 550 50 L 600 50" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 5 -->
+    <circle cx="650" cy="50" r="35" stroke="#a78bfa" stroke-width="3" fill="#1e293b"/>
+    <text x="650" y="55" text-anchor="middle" fill="#a78bfa" font-family="Arial, sans-serif" font-size="20" font-weight="bold">5</text>
+    <text x="650" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">EDIT/APPROVE</text>
+    <text x="650" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Human Decision</text>
+
+    <!-- Arrow -->
+    <path d="M 700 50 L 750 50" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 6 -->
+    <circle cx="800" cy="50" r="35" fill="url(#greenGrad)"/>
+    <text x="800" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">6</text>
+    <text x="800" y="105" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">EXPORT</text>
+    <text x="800" y="120" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Google Sheets</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="50" y="310" width="180" height="160" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="140" y="335" text-anchor="middle" fill="#f1f5f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Legend</text>
+
+  <rect x="65" y="350" width="20" height="12" fill="#f59e0b"/>
+  <text x="95" y="360" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Data Sources</text>
+
+  <rect x="65" y="375" width="20" height="12" fill="#3b82f6"/>
+  <text x="95" y="385" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Backend Services</text>
+
+  <rect x="65" y="400" width="20" height="12" fill="#10b981"/>
+  <text x="95" y="410" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Outputs</text>
+
+  <rect x="65" y="425" width="20" height="12" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="95" y="435" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Human Actions</text>
+
+  <!-- Footer -->
+  <text x="600" y="790" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="10">AthenaGen AI Solutions - TechFlow Automation Platform - December 2025</text>
+</svg>
