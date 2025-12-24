@@ -67,7 +67,7 @@ cp .env.example .env.local
 # 2. Edit backend/.env
 # - Configure DATABASE_URL (Docker vs local)
 # - (Optional) HUGGINGFACE_TOKEN for AI Search
-# - (Optional) Google Sheets credentials
+# - Google Sheets credentials
 ```
 
 ## Quick Start

@@ -264,7 +264,9 @@ class ExportService:
             writer.writeheader()
             writer.writerows(data)
 
-        return output.getvalue().encode("utf-8"), f"techflow_export_{timestamp}.csv"
+        # Add UTF-8 BOM for Excel compatibility with Greek characters
+        csv_bytes = b'\xef\xbb\xbf' + output.getvalue().encode("utf-8")
+        return csv_bytes, f"techflow_export_{timestamp}.csv"
 
     def _export_xlsx(
         self, data: list[dict[str, Any]], timestamp: str

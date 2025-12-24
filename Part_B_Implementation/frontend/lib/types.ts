@@ -159,8 +159,10 @@ export interface StatsResponse {
   by_status: Record<string, number>;
   by_type: Record<string, number>;
   pending_count: number;
+  edited_count: number;
   approved_count: number;
   rejected_count: number;
+  exported_count: number;
 }
 
 export interface FilesResponse {

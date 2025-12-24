@@ -64,7 +64,16 @@ Part_B_Implementation/backend/credentials/
    GOOGLE_SPREADSHEET_ID=το_id_του_spreadsheet
    ```
 
-> **Σημαντικό**: Το Spreadsheet ID είναι υποχρεωτικό. Η εφαρμογή δεν δημιουργεί αυτόματα νέο spreadsheet.
+5. **(Προαιρετικά)** Αν θέλετε να οργανώσετε το spreadsheet σε συγκεκριμένο φάκελο στο Drive:
+   - Δημιουργήστε ή επιλέξτε έναν φάκελο στο Google Drive
+   - Αντιγράψτε το **Folder ID** από το URL του φακέλου:
+     `https://drive.google.com/drive/folders/FOLDER_ID_ΕΔΩ`
+   - Ενημερώστε το `.env`:
+     ```bash
+     GOOGLE_DRIVE_FOLDER_ID=το_id_του_φακέλου
+     ```
+
+> **Σημαντικό**: Το Spreadsheet ID είναι υποχρεωτικό. Η εφαρμογή δεν δημιουργεί αυτόματα νέο spreadsheet. Το Folder ID είναι προαιρετικό και χρησιμοποιείται μόνο για οργάνωση.
 
 ---
 
