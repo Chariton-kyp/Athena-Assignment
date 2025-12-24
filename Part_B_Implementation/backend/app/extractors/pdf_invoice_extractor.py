@@ -340,7 +340,7 @@ class PDFInvoiceExtractor(BaseExtractor[InvoiceData]):
 
         # Address
         addr_patterns = [
-            r"Διεύθυνση:\s*(.+?)(?:\n\n|\nΑΦΜ|\nΤηλ)",
+            r"Διεύθυνση:\s*([^\n]+)",
             r"((?:Οδός|Λεωφ\.|Βας\.)[^,\n]+,?\s*\d{5}\s*\w+)",
         ]
         for pattern in addr_patterns:

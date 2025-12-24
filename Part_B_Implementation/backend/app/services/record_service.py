@@ -516,7 +516,7 @@ class RecordService:
             "total": total,
             "pending_count": pending,
             "edited_count": edited,
-            "approved_count": approved,
+            "approved_count": approved + edited,  # Include edited as "ready for approval"
             "rejected_count": rejected,
             "exported_count": exported,
         }
