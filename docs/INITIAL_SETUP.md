@@ -33,6 +33,7 @@ cp .env.example .env.local
 
 ---
 
+
 ## Βήμα 2: Ρύθμιση Backend (.env)
 
 Ανοίξτε το αρχείο `backend/.env` και ρυθμίστε τα παρακάτω:
