@@ -1,6 +1,6 @@
 # TechFlow Solutions - Data Automation Project
 
-**Author:** Kypraios Chariton (Κυπραίος Χαρίτων)
+**Author:** Kypraios Chariton
 **Assessment:** AthenaGen AI - Solutions Engineer Position
 **Date:** December 2025
 
@@ -50,24 +50,24 @@ Athena-Assignment/
 
 ## Initial Setup
 
-> **Σημαντικό:** Πριν εκκινήσετε το project, πρέπει να ρυθμίσετε τα configuration files.
+> **Important:** Before starting the project, you need to configure the configuration files.
 
-📄 **Δείτε τον πλήρη οδηγό:** [docs/INITIAL_SETUP.md](docs/INITIAL_SETUP.md)
+📄 **See the full guide:** [docs/INITIAL_SETUP.md](docs/INITIAL_SETUP.md)
 
-### Γρήγορη Ρύθμιση
+### Quick Setup
 
 ```bash
-# 1. Δημιουργία .env αρχείων
+# 1. Create .env files
 cd Part_B_Implementation/backend
 cp .env.example .env
 
 cd ../frontend
 cp .env.example .env.local
 
-# 2. Επεξεργασία backend/.env
-# - Ρυθμίστε DATABASE_URL (Docker vs local)
-# - (Προαιρετικά) HUGGINGFACE_TOKEN για AI Search
-# - (Προαιρετικά) Google Sheets credentials
+# 2. Edit backend/.env
+# - Configure DATABASE_URL (Docker vs local)
+# - (Optional) HUGGINGFACE_TOKEN for AI Search
+# - (Optional) Google Sheets credentials
 ```
 
 ## Quick Start
